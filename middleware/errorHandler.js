@@ -1,7 +1,9 @@
+// eslint-disable-next-line
 import colors from 'colors';
-
+// eslint-disable-next-line
 const errorHandler = (err, req, res, next) => {
   console.log(`ERROR ====> ${err.message}`.bgRed.white);
+  console.trace();
   res.status(500).send('The server has encountered an error');
 };
 
